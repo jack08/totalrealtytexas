@@ -11,12 +11,7 @@
         crossorigin="anonymous">
 
     <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
-        crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.0/umd/popper.min.js" integrity="sha384-cs/chFZiN24E4KMATLdqdvsezGxaGsi4hLGOzlXwp5UZB1LY//20VyM2taTB4QvJ"
-        crossorigin="anonymous"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js" integrity="sha384-uefMccjFJAIv6A+rW+L4AHf99KvxDjWSu1z9VI8SKNVmz4sk7buKt/6v9KI65qnm"
-        crossorigin="anonymous"></script>
+
     <!-- Global site tag (gtag.js) - Google Analytics -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=UA-119925269-1"></script>
     <script>
@@ -35,7 +30,7 @@
 <body>
     <nav class="navbar navbar-light bg-light">
         <a class="navbar-brand" href="#">
-            <img src="images/totalrealtytexas-logo.jpg" height="30" class="d-inline-block align-top" alt="">
+            <img src="images/totalrealtytexas-logo.jpg" height="50" class="d-inline-block align-top" alt="">
         </a>
     </nav>
 
@@ -64,25 +59,6 @@
                     <img src="images/wechat-qr.jpg" alt="wechat qr total realty texas" height="150px">
                     <div style="color: white; margin-top: 10px;">WeChat: WendyChenAustin</div>
                 </div>
-                <div class="split" style="display: none;">
-                    <span>OR</span>
-                </div>
-
-                <form class="myform" action="https://alta-labs.us18.list-manage.com/subscribe/post-json?c=?" method="GET"
-                    style="padding: 30px 30px 0 30px; display: none;">
-                    <input type="hidden" name="u" value="c9ce7abb2eb665050a6b17dd2">
-                    <input type="hidden" name="id" value="53ea7b51d0">
-                    <div class="mc-field-group">
-                        <input type="text" class="form-control" placeholder="Your Name" name="NAME" id="mce-NAME" style="margin-bottom:20px;"
-                            required>
-                        <input type="text" class="form-control" placeholder="Your Phone" name="PHONE" id="mce-PHONE"
-                            style="margin-bottom:20px;" required>
-                        <input type="email" class="form-control" placeholder="Your Email" name="EMAIL" id="mce-EMAIL"
-                            required>
-                        <input type="submit" name="subscribe" value="Submit" id="mc-embedded-subscribe" class="btn btn-trt btn-block"
-                            style="margin:10px 0;" required></input>
-                    </div>
-                </form>
 
             </div>
         </div>
@@ -312,16 +288,16 @@
                 <div class="card col-sm feature">
                     <div class="card-body">
                         <div>Please leave your contact information and we will call you back ASAP.</div>
-                        <form class="myform" action="https://alta-labs.us18.list-manage.com/subscribe/post-json?c=?"
-                            method="GET" style="padding: 30px 30px 0 30px;">
+                        <form class="myform" action="https://docs.google.com/forms/d/e/1FAIpQLSduRHGDBQRkEvAu5xCM2_860S3u5WYvLR4DR3BYKWLBOaduHA/formResponse"
+                            method="POST" style="padding: 30px 30px 0 30px;">
                             <input type="hidden" name="u" value="c9ce7abb2eb665050a6b17dd2">
                             <input type="hidden" name="id" value="53ea7b51d0">
                             <div class="mc-field-group">
-                                <input type="text" class="form-control" placeholder="Your Name" name="NAME" id="mce-NAME"
+                                <input type="text" class="form-control" placeholder="Your Name" name="entry.1848476596"
                                     style="margin-bottom:20px;" required>
-                                <input type="text" class="form-control" placeholder="Your Phone" name="PHONE" id="mce-PHONE"
+                                <input type="text" class="form-control" placeholder="Your Phone" name="entry.172296734"
                                     style="margin-bottom:20px;" required>
-                                <input type="email" class="form-control" placeholder="Your Email" name="EMAIL" id="mce-EMAIL"
+                                <input type="email" class="form-control" placeholder="Your Email" name="entry.675186290"
                                     required>
                                 <input type="submit" name="subscribe" value="Submit" id="mc-embedded-subscribe" class="btn btn-trt btn-block"
                                     style="margin:10px 0;" required></input>
@@ -489,7 +465,12 @@
 
         }
     </style>
-
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.0/umd/popper.min.js" integrity="sha384-cs/chFZiN24E4KMATLdqdvsezGxaGsi4hLGOzlXwp5UZB1LY//20VyM2taTB4QvJ"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js" integrity="sha384-uefMccjFJAIv6A+rW+L4AHf99KvxDjWSu1z9VI8SKNVmz4sk7buKt/6v9KI65qnm"
+        crossorigin="anonymous"></script>
     <script>
         $(document).ready(function () {
             // I only have one form on the page but you can be more specific if need be.
@@ -499,28 +480,20 @@
                 $('form input[type="submit"]').bind('click', function (event) {
                     if (event) event.preventDefault();
                     // validate_input() is a validation function I wrote, you'll have to substitute this with your own.
-                    register($form);
+                    postToGoogle($form);
                 });
             }
         });
 
-        function register($form) {
+        function postToGoogle($form) {
+
             $.ajax({
+                data: $form.serialize(),
                 type: $form.attr('method'),
                 url: $form.attr('action'),
-                data: $form.serialize(),
-                cache: false,
-                dataType: 'json',
-                contentType: "application/json; charset=utf-8",
-                error: function (err) {
-                    alert("Could not connect to the registration server. Please try again later.");
-                },
-                success: function (data) {
-                    if (data.result != "success") {
-                        alert('Please check your info.');
-                    } else {
-                        alert('Thank you.')
-                    }
+                dataType: "xml",
+                statusCode: {
+                    alert('Thank you. We will contact you shortly.')
                 }
             });
         }
